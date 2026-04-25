@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Profil - Lily Sumarni</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        // Konfigurasi warna sesuai desain asli
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utama: '#0F2B54',
+                        kartu: '#2E4A72',
+                        aksen: '#FF4D6D',
+                        teksPutih: '#FFFFFF',
+                        teksAbu: '#BFCADB',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .foto-profil {
+                @apply w-[110px] h-[110px] rounded-full border-[3px] border-aksen overflow-hidden;
+            }
+            .bayangan-kartu {
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            }
+            .logo-ig {
+                @apply w-[36px] h-[36px] rounded-full bg-aksen/20 flex items-center justify-center text-aksen text-lg hover:bg-aksen hover:text-teksPutih transition-all duration-300;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-utama to-[#0A2248] min-h-screen flex items-center justify-center m-0 p-4">
+    <!-- Kartu Profil -->
+    <div class="bg-kartu w-[320px] rounded-2xl p-8 bayangan-kartu flex flex-col items-center relative">
+        <!-- Foto Profil -->
+        <div class="foto-profil mb-5">
+            <img 
+                src="https://i.ibb.co.com/6RKh2wF5/Whats-App-Image-2026-04-25-at-20-13-11.jpg" 
+                alt="Foto Profil Lily Sumarni" 
+                class="w-full h-full object-cover"
+            >
+        </div>
+
+        <!-- Nama -->
+        <h1 class="text-teksPutih text-[22px] font-bold uppercase tracking-wide mb-2">
+            LILY SUMARNI
+        </h1>
+
+        <!-- Pekerjaan -->
+        <p class="text-aksen text-sm font-medium mb-8">
+            RUMAH TANGGA
+        </p>
+
+        <!-- Bagian Hobby dan Isinya -->
+        <div class="w-full flex justify-between items-center mb-6">
+            <span class="text-teksAbu text-sm">Hobby</span>
+            <span class="text-teksPutih text-sm font-semibold uppercase">MASAK</span>
+        </div>
+
+        <!-- Logo Instagram di posisi yang diminta -->
+        <a 
+            href="https://www.instagram.com/mamoyandlova?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="logo-ig"
+            title="Kunjungi Akun Instagram"
+        >
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+</body>
+</html>
